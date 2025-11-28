@@ -139,7 +139,7 @@ def load_data():
     pandas.DataFrame
         A DataFrame containing the dataset used for analysis.
     """
-    df = pd.read_csv('/Users/domo/Library/Mobile Documents/com~apple~CloudDocs/Desktop/University/Master/Semester 3/Courses/Data Analytics/code/II/project/M5/Data_Viz_Project/mental_health_social_media_dataset.csv')
+    df = pd.read_csv("mental_health_social_media_dataset.csv")
     return df
 
 df = load_data()
