@@ -2,6 +2,7 @@ import os
 import numpy as np
 import pandas as pd
 import streamlit as st
+import plotly.express as px
 import plotly.graph_objects as go
 
 
@@ -21,7 +22,7 @@ st.set_page_config(
 def load_data() -> pd.DataFrame:
     """Load dataset from the same folder as this script."""
     base_path = os.path.dirname(__file__)
-    file_path = os.path.join(base_path, "/Users/domo/Library/Mobile Documents/com~apple~CloudDocs/Desktop/University/Master/Semester 3/Courses/Data Analytics/code/II/project/M5/Data_Viz_Project/mental_health_social_media_dataset.csv")
+    file_path = os.path.join(base_path, "mental_health_social_media_dataset.csv")
     df = pd.read_csv(file_path)
 
     # Age groups for colour in scatter plot
