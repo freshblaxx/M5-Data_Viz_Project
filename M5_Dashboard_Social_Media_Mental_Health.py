@@ -21,7 +21,7 @@ st.set_page_config(
 def load_data() -> pd.DataFrame:
     """Load dataset from the same folder as this script."""
     base_path = os.path.dirname(__file__)
-    file_path = os.path.join(base_path, "/Users/domo/Library/Mobile Documents/com~apple~CloudDocs/Desktop/University/Master/Semester 3/Courses/Data Analytics/code/II/project/M5/Data_Viz_Project/mental_health_social_media_dataset.csv")
+    file_path = os.path.join(base_path, "mental_health_social_media_dataset.csv")
     df = pd.read_csv(file_path)
 
     # Age groups for colour in scatter plot
@@ -169,11 +169,6 @@ with tab2:
                 marker=dict(size=6, opacity=0.6),
                 name=metric_choice,
                 text=data["age_group"],
-                 hoverlabel=dict(
-        bgcolor="white",     # Sets the hover box background to white
-        font_color="black",  # Sets the hover box text to black
-        bordercolor="#E5E7EB" # Optional grey border for the box
-    ),
                 hovertemplate=(
                     "Screen time: %{x} min<br>"
                     f"{metric_choice}: " + "%{y:.2f}<br>"
